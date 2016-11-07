@@ -1,6 +1,6 @@
 # MQTTRpc
 
-rabbitmq RPC on mqtt
+rabbitmq RPC on mqtt，轻量级通讯协议的同步请求
 
 ## Installation
 
@@ -24,6 +24,7 @@ Or install it yourself as:
   require 'bunny_rpc'
 
   client = MQTTRpc::Client.new(options)
-  response_body = client.publish('machine_schedule_publish', 'messages', 'response_topic')
+
+  response_body = client.publish('request_topic', 'message', 'response_topic')
 ```
 
