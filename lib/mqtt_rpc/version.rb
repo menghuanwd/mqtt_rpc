@@ -1,3 +1,3 @@
-module MqttRpc
-  VERSION = "0.1.0"
+module MQTTRpc
+  VERSION = '0.1.0'.freeze
 end

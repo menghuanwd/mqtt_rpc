@@ -1,5 +1,2 @@
-require "mqtt_rpc/version"
-
-module MqttRpc
-  # Your code goes here...
-end
+require 'mqtt_rpc/version'
+require 'mqtt_rpc/client'
