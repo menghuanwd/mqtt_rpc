@@ -21,7 +21,7 @@ Or install it yourself as:
 ## Usage
 
 ```
-  require 'bunny_rpc'
+  require 'mqtt_rpc'
 
   client = MQTTRpc::Client.new(options)
 
