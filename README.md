@@ -25,6 +25,8 @@ Or install it yourself as:
 
   client = MQTTRpc::Client.new(options)
 
+  3 seconds will timeout
+  client = MQTTRpc::Client.new(options, 3)
+
   response_body = client.publish('request_topic', 'message', 'response_topic')
 ```
-
