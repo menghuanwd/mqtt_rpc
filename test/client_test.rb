@@ -11,10 +11,10 @@ class TestClient < Minitest::Test
       @options = {
         host: '127.0.0.1',
         port: 1883,
-        username: 'guyifeng',
-        password: 'password'
+        username: 'guest',
+        password: 'guest'
       }
-      client = MQTTRpc::Client.new(@options, 10)
+      client = MQTTRpc::Client.new(@options, 100)
       client.publish('request_topic', 'message', 'response_topic')
     end
 
@@ -22,8 +22,8 @@ class TestClient < Minitest::Test
       @options = {
         host: '127.0.0.1',
         port: 1883,
-        username: 'guyifeng',
-        password: 'password'
+        username: 'guest',
+        password: 'guest'
       }
 
       client = MQTT::Client.connect(@options)

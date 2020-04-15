@@ -7,15 +7,6 @@ module MQTTRpc
       @timeout = timeout
     end
 
-    def connect
-      MQTT::Client.connect(@options)
-    end
-
-    def ready
-      @subscribe_connect = connect
-      @publish_connect = connect
-    end
-
     def publish(publish_topic, message, subscribe_topic)
       ready
 
@@ -35,6 +26,17 @@ module MQTTRpc
       end
 
       @payload
+    end
+
+    private
+
+    def connect
+      MQTT::Client.connect(@options)
+    end
+
+    def ready
+      @subscribe_connect = connect
+      @publish_connect = connect
     end
 
     def destroy

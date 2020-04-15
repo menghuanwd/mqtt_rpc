@@ -1,6 +1,6 @@
 # MQTTRpc
 
-rabbitmq RPC on mqtt，轻量级通讯协议的同步请求
+Rabbitmq Transfer Message By Sync On Mqtt
 
 ## Installation
 
@@ -12,21 +12,19 @@ gem 'mqtt_rpc'
 
 And then execute:
 
-    $ bundle
+  $ bundle
 
 Or install it yourself as:
 
-    $ gem install mqtt_rpc
+  $ gem install mqtt_rpc
 
 ## Usage
 
-```
+```ruby
   require 'mqtt_rpc'
 
-  client = MQTTRpc::Client.new(options)
+  # 3 seconds will timeout, default: 10
+  sync_client = MQTTRpc::Client.new(options, 3)
 
-  3 seconds will timeout
-  client = MQTTRpc::Client.new(options, 3)
-
-  response_body = client.publish('request_topic', 'message', 'response_topic')
+  response_body = sync_client.publish('request_topic', 'message', 'response_topic')
 ```
